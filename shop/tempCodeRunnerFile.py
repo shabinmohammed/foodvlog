@@ -1,0 +1,7 @@
+ # img=models.ImageField(upload_to='product')
+    # dsc=models.TextField()
+    # stock=models.IntegerField()
+    # available=models.BooleanField()
+    # price=models.IntegerField()
+    # offer=models.IntegerField()
+    # category=models.ForeignKey(categ,on_delete=models.CASCADE)

@@ -1,0 +1,195 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>MultiShop - Online Shop Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="{% static 'hm1/img/favicon.ico ' %}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'hm1/lib/animate/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'hm1/lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'hm1/css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid mb-3">
+        <div class="row px-xl-1">
+            <div class="col-lg-12">
+                <div id="header-carousel" class="carousel slide carousel-fade mb-30 mb-lg-0" data-ride="carousel">
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item position-relative active" style="height: 630px;">
+                            <img class="position-absolute w-100 h-100" src="{% static 'hm1/img/imggg.jpg' %}" style="object-fit: cover;">
+                            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                                <div class="p-3" style="max-width: 700px;">
+                                    <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">FOOD BOOK</h1>
+                                    <p class="mx-md-5 px-5 animate__animated animate__bounceIn">Eat<br>Sleep<br>Eat Again<br>Sleep Again<br>Enjoy Our Taste<br>Death Is Unexpected</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Carousel End -->
+<div class="nav-item dropdown">
+    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">FILTER</a>
+    <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
+        <a href="/" class="dropdown-item">all</a>
+        {% for i in ct %}
+        <a href={{i.get_url}} class="dropdown-item">{{i.name}}</a>
+<!--        <a href="checkout.html" class="dropdown-item">Checkout</a>-->
+        {% endfor%}
+    </div>
+</div>
+
+
+    <!-- Products Start -->
+<!--    <div class="container-fluid pt-5 pb-3">-->
+<!--        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Products</span></h2>-->
+<!--{% for i in pg.object_list %}-->
+<!--        <div class="row px-xl-5">-->
+
+<!--            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">-->
+
+<!--                <div class="product-item bg-light mb-4">-->
+
+<!--                    <div class="product-img position-relative overflow-hidden">-->
+<!--                        <a href="{{i.get_url}}"><img class="img img-fluid w-100" src="{{i.img.url}}" alt="" style="height:300px; width:300px;">-->
+<!--&lt;!&ndash;                        <div class="product-action">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--                        </a>-->
+<!--                    </div>-->
+<!--                    <div class="text-center py-4">-->
+<!--                        <a class="h6 text-decoration-none text-truncate" href="">{{i.name}}</a>-->
+<!--                        <div>{{i.dsc|truncatechars:10}}</div>-->
+<!--                        <div> stock left:  {{i.stock}} </div>-->
+<!--                        <div class="d-flex align-items-center justify-content-center mt-2">-->
+
+<!--                            <h5>RS:{{i.price}}</h5><h6 class="text-muted ml-2"><del>  </del></h6>-->
+<!--                        </div>-->
+<!--&lt;!&ndash;                        <div class="d-flex align-items-center justify-content-center mb-1">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <small class="fa fa-star text-primary mr-1"></small>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <small class="fa fa-star text-primary mr-1"></small>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <small class="fa fa-star text-primary mr-1"></small>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <small class="fa fa-star text-primary mr-1"></small>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <small class="fa fa-star text-primary mr-1"></small>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <small>(99)</small>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+
+<!--                    </div>-->
+
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        {% endfor %}-->
+
+<!--    </div>-->
+    <!-- Products End -->
+
+
+
+
+
+<!--    product start-->
+    <div class="container-fluid pt-5 pb-3">
+        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Products</span></h2>
+        <div class="row px-xl-5">
+
+{% for i in pg.object_list %}
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+                <div class="product-item bg-light mb-4">
+                    <div class="product-img position-relative overflow-hidden">
+                        <a href="{{i.get_url}}">
+                        <img class="img-fluid w-100" src="{{i.img.url}}" alt="" style="height:300px; width:200px;">
+                        </a>
+<!--                        <div class="product-action">-->
+<!--                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>-->
+<!--                            <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>-->
+<!--                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>-->
+<!--                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>-->
+<!--                        </div>-->
+                    </div>
+                    <div class="text-center py-4">
+                        <a class="h6 text-decoration-none text-truncate" href="">{{i.name}}</a>
+                        <div>{{i.dsc|truncatechars:10}}</div>
+                        <div> stock left:  {{i.stock}} </div>
+                        <div class="d-flex align-items-center justify-content-center mt-2">
+                            <h5>RS:{{i.price}}</h5><h6 class="text-muted ml-2"><del>RS:{{i.price}}</del></h6>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center mb-1">
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star-half-alt text-primary mr-1"></small>
+                            <small>(99)</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+<!--product end-->
+
+
+    <div class="pagintor"  style="margin-bottom:50px; ">
+        <center>page
+            {% for p in pg.paginator.page_range %}
+            <a href="?page={{p}}" class="btn btn-light btn-sm {% if pg.number == p %} active {% endif %}" style="background-color:yellow;"> {{p}}    </a>
+
+            {% endfor%}
+        </center>
+    </div>
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'hm1/lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'hm1/lib/owlcarousel/owl.carousel.min.js' %}"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="{% static 'hm1/mail/jqBootstrapValidation.min.js' %}"></script>
+    <script src="{% static 'hm1/mail/contact.js' %}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{% static 'hm1/js/main.js' %}"></script>
+</body>
+</html>
+{% endblock %}   
